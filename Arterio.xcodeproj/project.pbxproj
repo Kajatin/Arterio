@@ -11,6 +11,28 @@
 		4C07CE432C691DB600A7E1D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C07CE422C691DB600A7E1D0 /* ContentView.swift */; };
 		4C07CE452C691DB800A7E1D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C07CE442C691DB800A7E1D0 /* Assets.xcassets */; };
 		4C07CE482C691DB800A7E1D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C07CE472C691DB800A7E1D0 /* Preview Assets.xcassets */; };
+		4C07CE4F2C69366F00A7E1D0 /* ScrollDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C07CE4E2C69366F00A7E1D0 /* ScrollDetector.swift */; };
+		4C07CE512C69368A00A7E1D0 /* ResizableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C07CE502C69368A00A7E1D0 /* ResizableHeaderView.swift */; };
+		4C07CE532C69478A00A7E1D0 /* ExpandHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C07CE522C69478A00A7E1D0 /* ExpandHeader.swift */; };
+		4C3F96632C75B2AD0031B753 /* HistoryOfRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F96622C75B2AD0031B753 /* HistoryOfRecords.swift */; };
+		4C4266872C6FD83200375D05 /* BPRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4266862C6FD83200375D05 /* BPRecord.swift */; };
+		4C42668A2C6FDCA900375D05 /* ModelContainerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4266892C6FDCA500375D05 /* ModelContainerManager.swift */; };
+		4C42668C2C6FDCE600375D05 /* ModelDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42668B2C6FDCE100375D05 /* ModelDataContainer.swift */; };
+		4C42668E2C6FDE8B00375D05 /* SyncBPRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42668D2C6FDE8B00375D05 /* SyncBPRecords.swift */; };
+		4C4266902C6FFBCA00375D05 /* NoRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42668F2C6FFBCA00375D05 /* NoRecordsView.swift */; };
+		4C4266922C6FFCEA00375D05 /* Overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4266912C6FFCEA00375D05 /* Overview.swift */; };
+		4C4266952C6FFD8700375D05 /* RecentBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4266942C6FFD8700375D05 /* RecentBanner.swift */; };
+		4C4266982C707A4100375D05 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4266972C707A4000375D05 /* Welcome.swift */; };
+		4C42669B2C71EBDD00375D05 /* HKBloodPressureRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42669A2C71EBDD00375D05 /* HKBloodPressureRecord.swift */; };
+		4C42669D2C71F71B00375D05 /* HKError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42669C2C71F71B00375D05 /* HKError.swift */; };
+		4C42669F2C71FC9900375D05 /* WelcomeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42669E2C71FC9900375D05 /* WelcomeError.swift */; };
+		4C4266A12C71FCA900375D05 /* SharingDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4266A02C71FCA900375D05 /* SharingDenied.swift */; };
+		4C4266A32C71FCBC00375D05 /* RequestSharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4266A22C71FCBC00375D05 /* RequestSharing.swift */; };
+		4C4266A52C71FCD000375D05 /* UnsupportedDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4266A42C71FCD000375D05 /* UnsupportedDevice.swift */; };
+		4C601BC12C6BEB940081D445 /* Backup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C601BC02C6BEB940081D445 /* Backup.swift */; };
+		4C601BC52C6BF44E0081D445 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C601BC42C6BF44E0081D445 /* HealthKitManager.swift */; };
+		4C8E00E22C71FEEC004EA5DD /* SharingAuthorized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E00E12C71FEEC004EA5DD /* SharingAuthorized.swift */; };
+		4CE2B7662C73B22200ED1742 /* BPEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2B7652C73B22200ED1742 /* BPEditor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +41,30 @@
 		4C07CE422C691DB600A7E1D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4C07CE442C691DB800A7E1D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C07CE472C691DB800A7E1D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4C07CE4E2C69366F00A7E1D0 /* ScrollDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollDetector.swift; sourceTree = "<group>"; };
+		4C07CE502C69368A00A7E1D0 /* ResizableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableHeaderView.swift; sourceTree = "<group>"; };
+		4C07CE522C69478A00A7E1D0 /* ExpandHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandHeader.swift; sourceTree = "<group>"; };
+		4C3F96622C75B2AD0031B753 /* HistoryOfRecords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryOfRecords.swift; sourceTree = "<group>"; };
+		4C4266862C6FD83200375D05 /* BPRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPRecord.swift; sourceTree = "<group>"; };
+		4C4266892C6FDCA500375D05 /* ModelContainerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContainerManager.swift; sourceTree = "<group>"; };
+		4C42668B2C6FDCE100375D05 /* ModelDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataContainer.swift; sourceTree = "<group>"; };
+		4C42668D2C6FDE8B00375D05 /* SyncBPRecords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncBPRecords.swift; sourceTree = "<group>"; };
+		4C42668F2C6FFBCA00375D05 /* NoRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRecordsView.swift; sourceTree = "<group>"; };
+		4C4266912C6FFCEA00375D05 /* Overview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overview.swift; sourceTree = "<group>"; };
+		4C4266942C6FFD8700375D05 /* RecentBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentBanner.swift; sourceTree = "<group>"; };
+		4C4266972C707A4000375D05 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
+		4C42669A2C71EBDD00375D05 /* HKBloodPressureRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKBloodPressureRecord.swift; sourceTree = "<group>"; };
+		4C42669C2C71F71B00375D05 /* HKError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKError.swift; sourceTree = "<group>"; };
+		4C42669E2C71FC9900375D05 /* WelcomeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeError.swift; sourceTree = "<group>"; };
+		4C4266A02C71FCA900375D05 /* SharingDenied.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingDenied.swift; sourceTree = "<group>"; };
+		4C4266A22C71FCBC00375D05 /* RequestSharing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSharing.swift; sourceTree = "<group>"; };
+		4C4266A42C71FCD000375D05 /* UnsupportedDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsupportedDevice.swift; sourceTree = "<group>"; };
+		4C601BC02C6BEB940081D445 /* Backup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backup.swift; sourceTree = "<group>"; };
+		4C601BC32C6BF3E30081D445 /* Arterio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Arterio.entitlements; sourceTree = "<group>"; };
+		4C601BC42C6BF44E0081D445 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		4C601BC62C6BFB7A0081D445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4C8E00E12C71FEEC004EA5DD /* SharingAuthorized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingAuthorized.swift; sourceTree = "<group>"; };
+		4CE2B7652C73B22200ED1742 /* BPEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +97,13 @@
 		4C07CE3F2C691DB600A7E1D0 /* Arterio */ = {
 			isa = PBXGroup;
 			children = (
+				4C4266992C71EBA300375D05 /* HealthKit */,
+				4C4266962C707A2C00375D05 /* Onboarding */,
+				4C4266932C6FFD7E00375D05 /* Overview */,
+				4C4266882C6FDC9F00375D05 /* Model */,
+				4C601BC62C6BFB7A0081D445 /* Info.plist */,
+				4C601BC32C6BF3E30081D445 /* Arterio.entitlements */,
+				4C601BC22C6BEBCE0081D445 /* Testing */,
 				4C07CE402C691DB600A7E1D0 /* ArterioApp.swift */,
 				4C07CE422C691DB600A7E1D0 /* ContentView.swift */,
 				4C07CE442C691DB800A7E1D0 /* Assets.xcassets */,
@@ -65,6 +118,63 @@
 				4C07CE472C691DB800A7E1D0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4C4266882C6FDC9F00375D05 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C4266862C6FD83200375D05 /* BPRecord.swift */,
+				4C42668D2C6FDE8B00375D05 /* SyncBPRecords.swift */,
+				4C42668B2C6FDCE100375D05 /* ModelDataContainer.swift */,
+				4C4266892C6FDCA500375D05 /* ModelContainerManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C4266932C6FFD7E00375D05 /* Overview */ = {
+			isa = PBXGroup;
+			children = (
+				4C4266912C6FFCEA00375D05 /* Overview.swift */,
+				4CE2B7652C73B22200ED1742 /* BPEditor.swift */,
+				4C4266942C6FFD8700375D05 /* RecentBanner.swift */,
+				4C3F96622C75B2AD0031B753 /* HistoryOfRecords.swift */,
+				4C42668F2C6FFBCA00375D05 /* NoRecordsView.swift */,
+			);
+			path = Overview;
+			sourceTree = "<group>";
+		};
+		4C4266962C707A2C00375D05 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				4C4266972C707A4000375D05 /* Welcome.swift */,
+				4C8E00E12C71FEEC004EA5DD /* SharingAuthorized.swift */,
+				4C4266A42C71FCD000375D05 /* UnsupportedDevice.swift */,
+				4C4266A22C71FCBC00375D05 /* RequestSharing.swift */,
+				4C42669E2C71FC9900375D05 /* WelcomeError.swift */,
+				4C4266A02C71FCA900375D05 /* SharingDenied.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		4C4266992C71EBA300375D05 /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				4C42669C2C71F71B00375D05 /* HKError.swift */,
+				4C42669A2C71EBDD00375D05 /* HKBloodPressureRecord.swift */,
+				4C601BC42C6BF44E0081D445 /* HealthKitManager.swift */,
+			);
+			path = HealthKit;
+			sourceTree = "<group>";
+		};
+		4C601BC22C6BEBCE0081D445 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				4C601BC02C6BEB940081D445 /* Backup.swift */,
+				4C07CE522C69478A00A7E1D0 /* ExpandHeader.swift */,
+				4C07CE4E2C69366F00A7E1D0 /* ScrollDetector.swift */,
+				4C07CE502C69368A00A7E1D0 /* ResizableHeaderView.swift */,
+			);
+			path = Testing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +247,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4266902C6FFBCA00375D05 /* NoRecordsView.swift in Sources */,
+				4C4266982C707A4100375D05 /* Welcome.swift in Sources */,
+				4CE2B7662C73B22200ED1742 /* BPEditor.swift in Sources */,
+				4C4266A12C71FCA900375D05 /* SharingDenied.swift in Sources */,
+				4C07CE532C69478A00A7E1D0 /* ExpandHeader.swift in Sources */,
 				4C07CE432C691DB600A7E1D0 /* ContentView.swift in Sources */,
+				4C4266872C6FD83200375D05 /* BPRecord.swift in Sources */,
+				4C42669B2C71EBDD00375D05 /* HKBloodPressureRecord.swift in Sources */,
+				4C07CE512C69368A00A7E1D0 /* ResizableHeaderView.swift in Sources */,
+				4C601BC12C6BEB940081D445 /* Backup.swift in Sources */,
+				4C3F96632C75B2AD0031B753 /* HistoryOfRecords.swift in Sources */,
+				4C8E00E22C71FEEC004EA5DD /* SharingAuthorized.swift in Sources */,
+				4C4266922C6FFCEA00375D05 /* Overview.swift in Sources */,
+				4C42668E2C6FDE8B00375D05 /* SyncBPRecords.swift in Sources */,
+				4C42668C2C6FDCE600375D05 /* ModelDataContainer.swift in Sources */,
+				4C42669F2C71FC9900375D05 /* WelcomeError.swift in Sources */,
 				4C07CE412C691DB600A7E1D0 /* ArterioApp.swift in Sources */,
+				4C601BC52C6BF44E0081D445 /* HealthKitManager.swift in Sources */,
+				4C42668A2C6FDCA900375D05 /* ModelContainerManager.swift in Sources */,
+				4C4266A52C71FCD000375D05 /* UnsupportedDevice.swift in Sources */,
+				4C4266A32C71FCBC00375D05 /* RequestSharing.swift in Sources */,
+				4C42669D2C71F71B00375D05 /* HKError.swift in Sources */,
+				4C4266952C6FFD8700375D05 /* RecentBanner.swift in Sources */,
+				4C07CE4F2C69366F00A7E1D0 /* ScrollDetector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,17 +401,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Arterio/Arterio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Arterio/Preview Content\"";
 				DEVELOPMENT_TEAM = T2HL3ZXJQU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Arterio/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Need even more access please";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Give me access because I need access now";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,17 +436,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Arterio/Arterio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Arterio/Preview Content\"";
 				DEVELOPMENT_TEAM = T2HL3ZXJQU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Arterio/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Need even more access please";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Give me access because I need access now";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

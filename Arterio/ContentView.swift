@@ -6,16 +6,29 @@
 //
 
 import SwiftUI
+import SwiftData
+
+// systolic/diastolic
+// heart rate?
+// date
+// position (sitting, lying, standing)
+// arm (left right)
+// time of day (morning, afternoon, evening, night)
+// before or after specific activities (exercise, meal)
+// general mood
+// stress level (reported by user)
+// tags + notes
 
 struct ContentView: View {
+    @AppStorage("needsOnboarding") var needsOnboarding = true
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        if needsOnboarding {
+            Welcome()
+        } else {
+            Overview()
+                .syncBPRecords()
         }
-        .padding()
     }
 }
 

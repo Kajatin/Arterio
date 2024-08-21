@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct ArterioApp: App {
+    @State private var healthKitManager = HealthKitManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .modelDataContainer()
+                .environment(healthKitManager)
         }
     }
 }
