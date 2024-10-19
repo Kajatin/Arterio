@@ -46,6 +46,7 @@ struct Insights: View {
             
             TimeRangePicker(preselectedIndex: $selectedTimeRange)
         }
+        .padding(.horizontal)
     }
     
     var filteredRecords: [BPRecord] {

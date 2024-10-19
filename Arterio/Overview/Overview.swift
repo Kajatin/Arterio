@@ -38,7 +38,6 @@ struct Overview: View {
                         // HistoryOfRecords(records: records)
                     }
                 }
-                .padding()
                 
                 Button {
                     showEditor.toggle()

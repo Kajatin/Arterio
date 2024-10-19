@@ -98,6 +98,7 @@ struct RecentBanner: View {
             }
         }
         .foregroundStyle(.antiFlashWhite)
+        .padding(.horizontal)
     }
 }
 

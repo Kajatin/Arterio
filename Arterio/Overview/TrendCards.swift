@@ -16,6 +16,7 @@ struct TrendCards: View {
             Text("Trends")
                 .font(.system(size: 24, weight: .bold, design: .serif))
                 .foregroundStyle(.antiFlashWhite)
+                .padding(.horizontal)
             
             ScrollView(.horizontal) {
                 HStack(spacing: 12) {
@@ -26,6 +27,7 @@ struct TrendCards: View {
                 .padding(.bottom, 4)
             }
             .scrollIndicators(.never)
+            .contentMargins(.horizontal, 20, for: .scrollContent)
         }
     }
     
