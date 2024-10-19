@@ -9,69 +9,98 @@ import SwiftUI
 
 struct RecentBanner: View {
     var record: BPRecord
+    var records: [BPRecord]
     
     var body: some View {
-        ZStack(alignment: .bottom) {
-            Color.hookersGreen
+        VStack(alignment: .leading, spacing: 12) {
+            Text(record.record.timestamp, format: Date.RelativeFormatStyle(presentation: .named, capitalizationContext: .beginningOfSentence))
+                .font(.system(size: 24, weight: .bold, design: .serif))
             
             HStack(alignment: .center) {
                 HStack(spacing: 24) {
                     VStack(alignment: .leading, spacing: 0) {
                         Text("sys".uppercased())
                             .font(.system(size: 18, weight: .bold, design: .serif))
-                            .foregroundStyle(.antiFlashWhite)
                             .opacity(0.6)
                         
                         Text(record.record.systolic.formatted())
                             .font(.system(size: 48, weight: .black, design: .serif))
-                            .foregroundStyle(.antiFlashWhite)
                     }
                     
                     VStack(alignment: .leading, spacing: 0) {
                         Text("dia".uppercased())
                             .font(.system(size: 18, weight: .bold, design: .serif))
-                            .foregroundStyle(.antiFlashWhite)
                             .opacity(0.6)
                         
                         Text(record.record.diastolic.formatted())
                             .font(.system(size: 48, weight: .black, design: .serif))
-                            .foregroundStyle(.antiFlashWhite)
                     }
                 }
                 
                 Spacer()
                 
-                ZStack {
-                    Trends(points: [0.3, 0.6, 0.4, 0.7, 0.5, 0.2, 0.8, 0.1])
-                        .stroke(.antiFlashWhite, lineWidth: 3)
-                        .frame(width: 160, height: 100)
+                HStack {
+                    if let timeOfDay = record.timeOfDay {
+                        let icon = switch timeOfDay {
+                        case .morning:
+                            "sun.horizon.fill"
+                        case .afternoon:
+                            "sun.max.fill"
+                        case .evening:
+                            "moon.fill"
+                        case .night:
+                            "moon.stars.fill"
+                        }
+                        
+                        Image(systemName: icon)
+                            .font(.system(size: 24))
+                    }
                     
-                    Trends(points: [0.34, 0.75, 0.5, 0.78, 0.52, 0.38, 0.91, 0.26])
-                        .stroke(.antiFlashWhite.opacity(0.6), lineWidth: 3)
-                        .frame(width: 160, height: 100)
+                    if let position = record.position {
+                        let icon = switch position {
+                        case .lying:
+                            "bed.double"
+                        case .sitting:
+                            "chair"
+                        case .standing:
+                            "figure.stand"
+                        }
+                        
+                        Image(systemName: icon)
+                            .font(.system(size: 24))
+                    }
+                    
+                    if let arm = record.arm {
+                        ZStack {
+                            Image(systemName: "hand.raised")
+                                .font(.system(size: 24))
+                                .rotation3DEffect(.degrees(arm == .left ? 180 : 0), axis: (0, 1, 0))
+                            Text(arm == .left ? "L" : "R")
+                                .font(.system(size: 10, weight: .bold, design: .serif))
+                                .offset(y: 4)
+                        }
+                    }
+                    
+                    if let stress = record.stress {
+                        let icon = switch stress {
+                        case .low:
+                            "1.square"
+                        case .medium:
+                            "2.square"
+                        case .high:
+                            "3.square"
+                        }
+                        
+                        Image(systemName: icon)
+                            .font(.system(size: 24))
+                    }
                 }
             }
-            .padding()
         }
+        .foregroundStyle(.antiFlashWhite)
     }
 }
 
-struct Trends: Shape {
-    var points: [Double]
-    
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        
-        path.move(to: CGPoint(x: rect.minX, y: rect.maxY * CGFloat(points[0])))
-        
-        points.enumerated().forEach { p in
-            path.addLine(to: CGPoint(x: rect.maxX * CGFloat(p.offset) / CGFloat(points.count), y: rect.maxY * p.element))
-        }
-        
-        return path
-    }
-}
-
-#Preview {
-    RecentBanner(record: .init(record: HKBloodPressureRecord(uuid: UUID(), systolic: 120, diastolic: 80, timestamp: .now)))
-}
+//#Preview {
+//    RecentBanner(record: .init(record: HKBloodPressureRecord(uuid: UUID(), systolic: 120, diastolic: 80, timestamp: .now)))
+//}

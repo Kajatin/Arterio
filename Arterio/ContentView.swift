@@ -20,13 +20,17 @@ import SwiftData
 // tags + notes
 
 struct ContentView: View {
+    @State private var selection: AppScreen? = .home
+    
     @AppStorage("needsOnboarding") var needsOnboarding = true
     
     var body: some View {
         if needsOnboarding {
             Welcome()
         } else {
-            Overview()
+//            AppTabView(selection: $selection)
+//                .syncBPRecords()
+            HomeNavigationStack()
                 .syncBPRecords()
         }
     }

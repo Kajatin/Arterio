@@ -32,8 +32,6 @@ struct SyncBPRecordsViewModifier: ViewModifier {
             Task {
                 let (addedRecords, deletedRecords) = await healthKitManager.syncBloodPressure()
                 
-                print("\(String(describing: healthKitManager.error))")
-                
                 // Register new records that were added in Apple Health.
                 let swiftDataRecords = try context.fetch(FetchDescriptor<BPRecord>())
                 for record in addedRecords {

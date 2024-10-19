@@ -8,26 +8,37 @@
 import SwiftUI
 import SwiftData
 
+enum TimeRange: String, CaseIterable {
+    case week = "Week"
+    case month = "Month"
+    case year = "Year"
+}
+
 struct Overview: View {
+    @Binding var navigationPath: [BPRecord]
+    
     @Query(sort: \BPRecord.record.timestamp, order: .reverse) var records: [BPRecord]
     
     @State private var showEditor = false
+    @State private var selectedTimeRange: TimeRange = .week
     
     var body: some View {
         if records.isEmpty {
             NoRecordsView()
         } else {
             ZStack(alignment: .bottomTrailing) {
-                Color.antiFlashWhite
+                Color.hookersGreen
+                    .ignoresSafeArea()
                 
-                VStack {
-                    RecentBanner(record: records.first!)
-                        .frame(height: 200)
-                        .clipShape(UnevenRoundedRectangle(bottomLeadingRadius: 24, bottomTrailingRadius: 24))
-                        .shadow(color: .black.opacity(0.2), radius: 0, x: 0, y: 4)
-                    
-                    HistoryOfRecords()
+                ScrollView {
+                    VStack(spacing: 20) {
+                        RecentBanner(record: records.first!, records: records)
+                        TrendCards(records: records, selectedTimeRange: selectedTimeRange)
+                        Insights(records: records, selectedTimeRange: $selectedTimeRange)
+                        // HistoryOfRecords(records: records)
+                    }
                 }
+                .padding()
                 
                 Button {
                     showEditor.toggle()
@@ -35,8 +46,8 @@ struct Overview: View {
                     Image(systemName: "plus")
                 }
                 .buttonStyle(ProminentFAB())
+                .padding(.horizontal)
             }
-            .ignoresSafeArea()
             .sheet(isPresented: $showEditor) {
                 BPEditor()
             }
@@ -55,12 +66,13 @@ struct ProminentFAB: ButtonStyle {
                     .shadow(color: .black.opacity(0.2), radius: 0, x: 0, y: 4)
             )
             .foregroundStyle(.antiFlashWhite)
-            .padding(.horizontal, 20)
-            .padding(.vertical, 32)
     }
 }
 
 #Preview {
-    Overview()
-        .modelDataContainer(inMemory: true)
+    @Previewable @State var path: [BPRecord] = []
+    NavigationStack {
+        Overview(navigationPath: $path)
+            .modelDataContainer(inMemory: true)
+    }
 }

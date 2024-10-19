@@ -57,7 +57,9 @@ extension HealthKitManager {
 
 extension HealthKitManager {
     func saveAnchor(_ anchor: HKQueryAnchor?) {
-        if let encodedAnchor = try? NSKeyedArchiver.archivedData(withRootObject: anchor, requiringSecureCoding: true) {
+        guard let safeAnchor = anchor else { return }
+        
+        if let encodedAnchor = try? NSKeyedArchiver.archivedData(withRootObject: safeAnchor, requiringSecureCoding: true) {
             UserDefaults.standard.set(encodedAnchor, forKey: "lastHKAnchor")
         }
     }
@@ -105,9 +107,6 @@ extension HealthKitManager {
                 }
                 
                 deletedRecords.append(contentsOf: queryResult.deletedObjects.map { $0.uuid })
-                
-                print(queryResult.addedSamples.count)
-                print(queryResult.deletedObjects.count)
                 
                 if (queryResult.addedSamples == []) && (queryResult.deletedObjects == []) {
                     break

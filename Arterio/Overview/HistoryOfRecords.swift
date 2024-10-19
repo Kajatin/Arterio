@@ -9,7 +9,8 @@ import SwiftUI
 import SwiftData
 
 struct HistoryOfRecords: View {
-    @Query(sort: \BPRecord.record.timestamp, order: .reverse) var records: [BPRecord]
+//    @Query(sort: \BPRecord.record.timestamp, order: .reverse) var records: [BPRecord]
+    var records: [BPRecord]
     
     var body: some View {
         ScrollView {
@@ -107,7 +108,7 @@ struct HistoryOfRecords: View {
     }
 }
 
-#Preview {
-    HistoryOfRecords()
-        .modelDataContainer(inMemory: true)
-}
+//#Preview {
+//    HistoryOfRecords()
+//        .modelDataContainer(inMemory: true)
+//}
