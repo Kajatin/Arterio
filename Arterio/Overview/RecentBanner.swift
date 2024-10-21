@@ -9,11 +9,10 @@ import SwiftUI
 
 struct RecentBanner: View {
     var record: BPRecord
-    var records: [BPRecord]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text(record.record.timestamp, format: Date.RelativeFormatStyle(presentation: .named, capitalizationContext: .beginningOfSentence))
+            Text(record.record!.timestamp, format: Date.RelativeFormatStyle(presentation: .named, capitalizationContext: .beginningOfSentence))
                 .font(.system(size: 24, weight: .bold, design: .serif))
             
             HStack(alignment: .center) {
@@ -23,7 +22,7 @@ struct RecentBanner: View {
                             .font(.system(size: 18, weight: .bold, design: .serif))
                             .opacity(0.6)
                         
-                        Text(record.record.systolic.formatted())
+                        Text(record.record!.systolic.rounded().formatted())
                             .font(.system(size: 48, weight: .black, design: .serif))
                     }
                     
@@ -32,7 +31,7 @@ struct RecentBanner: View {
                             .font(.system(size: 18, weight: .bold, design: .serif))
                             .opacity(0.6)
                         
-                        Text(record.record.diastolic.formatted())
+                        Text(record.record!.diastolic.rounded().formatted())
                             .font(.system(size: 48, weight: .black, design: .serif))
                     }
                 }

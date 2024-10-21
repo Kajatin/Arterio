@@ -44,7 +44,7 @@ struct TrendCards: View {
             startDate = calendar.date(byAdding: .year, value: -1, to: Date()) ?? Date()
         }
         
-        return records.filter { $0.record.timestamp >= startDate }
+        return records.filter { $0.record!.timestamp >= startDate }
     }
     
     struct RangeTrend: View {
@@ -58,8 +58,8 @@ struct TrendCards: View {
                     .opacity(0.6)
                 
                 HStack(alignment: .firstTextBaseline) {
-                    let averageSystolic = filteredRecords.reduce(0) { $0 + $1.record.systolic } / Double(filteredRecords.count)
-                    let averageDiastolic = filteredRecords.reduce(0) { $0 + $1.record.diastolic } / Double(filteredRecords.count)
+                    let averageSystolic = filteredRecords.reduce(0) { $0 + $1.record!.systolic } / Double(filteredRecords.count)
+                    let averageDiastolic = filteredRecords.reduce(0) { $0 + $1.record!.diastolic } / Double(filteredRecords.count)
                     Text("\(averageSystolic.rounded().formatted())/\(averageDiastolic.rounded().formatted())")
                         .font(.system(size: 28, weight: .bold, design: .serif))
                     
@@ -127,8 +127,8 @@ struct TrendCards: View {
                 
                 HStack {
                     if showingSystolic {
-                        let minSys = filteredRecords.min(by: { $0.record.systolic < $1.record.systolic })?.record.systolic ?? 0
-                        let maxSys = filteredRecords.max(by: { $0.record.systolic < $1.record.systolic })?.record.systolic ?? 0
+                        let minSys = filteredRecords.min(by: { $0.record!.systolic < $1.record!.systolic })?.record!.systolic ?? 0
+                        let maxSys = filteredRecords.max(by: { $0.record!.systolic < $1.record!.systolic })?.record!.systolic ?? 0
                         Text("\(minSys.rounded().formatted())")
                             .font(.system(size: 28, weight: .bold, design: .serif))
                         Image(systemName: "arrow.right")
@@ -136,8 +136,8 @@ struct TrendCards: View {
                         Text("\(maxSys.rounded().formatted())")
                             .font(.system(size: 28, weight: .bold, design: .serif))
                     } else {
-                        let minDia = filteredRecords.min(by: { $0.record.diastolic < $1.record.diastolic })?.record.diastolic ?? 0
-                        let maxDia = filteredRecords.max(by: { $0.record.diastolic < $1.record.diastolic })?.record.diastolic ?? 0
+                        let minDia = filteredRecords.min(by: { $0.record!.diastolic < $1.record!.diastolic })?.record!.diastolic ?? 0
+                        let maxDia = filteredRecords.max(by: { $0.record!.diastolic < $1.record!.diastolic })?.record!.diastolic ?? 0
                         Text("\(minDia.rounded().formatted())")
                             .font(.system(size: 28, weight: .bold, design: .serif))
                         Image(systemName: "arrow.right")

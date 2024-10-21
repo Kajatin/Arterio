@@ -11,7 +11,7 @@ import SwiftData
 @Model
 class BPRecord {
     var HKUuid: UUID
-    var record: HKBloodPressureRecord
+    var record: HKBloodPressureRecord?
     var position: Position?
     var arm: Arm?
     var timeOfDay: TimeOfDay?

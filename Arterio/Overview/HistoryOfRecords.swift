@@ -22,7 +22,7 @@ struct HistoryOfRecords: View {
                                 .font(.system(size: 12, weight: .bold, design: .serif))
                                 .opacity(0.6)
                             
-                            Text(rec.record.systolic.formatted())
+                            Text(rec.record!.systolic.formatted())
                                 .font(.system(size: 32, weight: .black, design: .serif))
                         }
                         
@@ -31,7 +31,7 @@ struct HistoryOfRecords: View {
                                 .font(.system(size: 12, weight: .bold, design: .serif))
                                 .opacity(0.6)
                             
-                            Text(rec.record.diastolic.formatted())
+                            Text(rec.record!.diastolic.formatted())
                                 .font(.system(size: 32, weight: .black, design: .serif))
                         }
                         

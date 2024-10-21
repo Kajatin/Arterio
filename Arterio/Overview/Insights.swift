@@ -21,8 +21,8 @@ struct Insights: View {
             Chart {
                 ForEach(filteredRecords, id: \.HKUuid) { record in
                     LineMark(
-                        x: .value("Date", record.record.timestamp),
-                        y: .value("Systolic", record.record.systolic),
+                        x: .value("Date", record.record!.timestamp),
+                        y: .value("Systolic", record.record!.systolic),
                         series: .value("Type", "Systolic")
                     )
                     .foregroundStyle(.hookersGreen)
@@ -30,8 +30,8 @@ struct Insights: View {
                     .interpolationMethod(.catmullRom)
                     
                     LineMark(
-                        x: .value("Date", record.record.timestamp),
-                        y: .value("Diastolic", record.record.diastolic),
+                        x: .value("Date", record.record!.timestamp),
+                        y: .value("Diastolic", record.record!.diastolic),
                         series: .value("Type", "Diastolic")
                     )
                     .foregroundStyle(.black)
@@ -39,7 +39,7 @@ struct Insights: View {
                     .interpolationMethod(.catmullRom)
                 }
             }
-            .chartYScale(domain: [(records.min(by: { $0.record.diastolic < $1.record.diastolic })?.record.diastolic ?? 10) - 10, (records.max(by: { $0.record.systolic < $1.record.systolic })?.record.systolic ?? 160) + 10])
+            .chartYScale(domain: [(records.min(by: { $0.record!.diastolic < $1.record!.diastolic })?.record!.diastolic ?? 10) - 10, (records.max(by: { $0.record!.systolic < $1.record!.systolic })?.record!.systolic ?? 160) + 10])
             .frame(height: 200)
             .padding()
             .background(.antiFlashWhite, in: RoundedRectangle(cornerRadius: 18))
@@ -62,7 +62,7 @@ struct Insights: View {
             startDate = calendar.date(byAdding: .year, value: -1, to: Date()) ?? Date()
         }
         
-        return records.filter { $0.record.timestamp >= startDate }
+        return records.filter { $0.record!.timestamp >= startDate }
     }
     
     var strideBy: Calendar.Component {

@@ -17,7 +17,7 @@ enum TimeRange: String, CaseIterable {
 struct Overview: View {
     @Binding var navigationPath: [BPRecord]
     
-    @Query(sort: \BPRecord.record.timestamp, order: .reverse) var records: [BPRecord]
+    @Query(sort: \BPRecord.record?.timestamp, order: .reverse) var records: [BPRecord]
     
     @State private var showEditor = false
     @State private var selectedTimeRange: TimeRange = .week
@@ -32,7 +32,7 @@ struct Overview: View {
                 
                 ScrollView {
                     VStack(spacing: 20) {
-                        RecentBanner(record: records.first!, records: records)
+                        RecentBanner(record: records.first!)
                         TrendCards(records: records, selectedTimeRange: selectedTimeRange)
                         Insights(records: records, selectedTimeRange: $selectedTimeRange)
                         // HistoryOfRecords(records: records)
